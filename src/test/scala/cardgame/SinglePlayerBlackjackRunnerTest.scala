@@ -34,15 +34,11 @@ class SinglePlayerBlackjackRunnerTest extends TestHelper:
         "",
         TestRandom, 
         _ => Hit, 
-        _ => Stick,
-        spbj => 
-          indicator = indicator + 1
-          spbj
+        _ => Stick
       )
     
     val state = runner.run match
       case _: PlayerWon => true
       case _ => false
     state shouldBe true
-    indicator shouldEqual 3
   }
