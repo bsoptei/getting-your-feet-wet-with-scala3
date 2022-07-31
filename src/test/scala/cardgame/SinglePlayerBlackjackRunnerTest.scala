@@ -44,5 +44,5 @@ class SinglePlayerBlackjackRunnerTest extends TestHelper:
       case _: PlayerWon => true
       case _ => false
     state shouldBe true
-    indicator shouldEqual 3
+    indicator shouldEqual 4
   }
