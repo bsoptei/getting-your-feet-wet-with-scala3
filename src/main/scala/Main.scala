@@ -3,6 +3,7 @@ import extensions.{given}
 import player.*
 import SinglePlayerBlackjack.{Decision, score}
 import SinglePlayerCardGameState.*
+import utils.Hand
 
 import scala.annotation.tailrec
 import scala.io.StdIn.readLine
@@ -41,6 +42,7 @@ def displayCurrentState(state: SinglePlayerCardGameState): SinglePlayerCardGameS
   state
 
 def displayHelper(status: String, player: Player, dealer: Dealer): Unit =
+  val displayHand = (hand: Hand) => hand.map(_.show).mkString(",")
   println(status)
-  println(s"Your hand: ${player.hand.mkString(",")}")
-  println(s"Dealer's hand: ${dealer.hand.mkString(",")}")
+  println(s"Your hand: ${displayHand(player.hand)}")
+  println(s"Dealer's hand: ${displayHand(dealer.hand)}")

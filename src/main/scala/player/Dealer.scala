@@ -1,6 +1,5 @@
 package player
 
-import show.Show
 import utils.Hand
 
-final case class Dealer(id: String, hand: Hand = Nil) derives Show
+final case class Dealer(id: String, hand: Hand = Nil)
