@@ -15,9 +15,3 @@ class PlayerDealerTest extends TestHelper:
     val p2 = p1.updateHand(TestHandWithoutAce)
     p2.hand.size shouldEqual 2
   }
-
-  test("Player/Dealer.show") {
-    val name = "X"
-    Player(name).show shouldEqual s"Player(id -> $name,hand -> List())"
-    Dealer(name).show shouldEqual s"Dealer(id -> $name,hand -> List())"
-  }
