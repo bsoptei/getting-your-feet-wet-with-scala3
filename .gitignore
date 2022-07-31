@@ -1,0 +1,16 @@
+# sbt specific
+target/
+project/project
+project/target
+project/.bloop
+
+# Bloop
+.bsp
+
+# VS Code
+.vscode/
+
+# Metals
+.bloop/
+.metals/
+metals.sbt
