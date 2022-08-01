@@ -33,8 +33,8 @@ def readUserDecision: Decision =
 
 def displayCurrentState(state: SinglePlayerCardGameState): SinglePlayerCardGameState =
   state match
-    case pd @ PlayerDecides(_, player, dealer) => displayHelper(s"${player.id}'s turn.", player, dealer)
-    case dd @ DealerDecides(_, player, dealer) => displayHelper(s"${dealer.id}'s turn.", player, dealer)
+    case PlayerDecides(_, player, dealer) => displayHelper(s"${player.id}'s turn.", player, dealer)
+    case DealerDecides(_, player, dealer) => displayHelper(s"${dealer.id}'s turn.", player, dealer)
     case DealerWon(player, dealer) => displayHelper("Dealer won.", player, dealer)
     case PlayerWon(player, dealer) => displayHelper("You won.", player, dealer)
     case Draw(player, dealer) => displayHelper("Draw", player, dealer)
