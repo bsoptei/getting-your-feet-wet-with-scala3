@@ -9,7 +9,7 @@ import utils.Hand
 import scala.util.Random
 
 given Shuffle[Random] with
-  extension (r: Random) def shuffle[T](xs: Iterable[T]): Iterable[T] = r.shuffle(xs)
+  extension (r: Random) def shuffle[T](xs: Seq[T]): Seq[T] = r.shuffle(xs)
   
 given UpdateHand[Dealer] with
   extension (d: Dealer) def updateHand(card: Card): Dealer = d.copy(hand = d.hand :+ card)

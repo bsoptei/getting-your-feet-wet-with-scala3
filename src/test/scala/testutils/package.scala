@@ -35,6 +35,6 @@ final val TestDealer = Dealer("The Dealer")
 case object NoOpShuffle
 
 given Shuffle[NoOpShuffle.type] with
-  extension (n: NoOpShuffle.type) def shuffle[T](xs: Iterable[T]): Iterable[T] = xs
+  extension (n: NoOpShuffle.type) def shuffle[T](xs: Seq[T]): Seq[T] = xs
 
 final def deterministicDeck(hand: Hand) = Deck(NoOpShuffle, hand)
